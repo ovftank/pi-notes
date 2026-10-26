@@ -1,0 +1,49 @@
+{
+	"name": "pi-notes",
+	"version": "0.1.0",
+	"description": "a task planning loop with state for pi",
+	"keywords": [
+		"pi-package",
+		"pi-extension",
+		"agent"
+	],
+	"license": "MIT",
+	"type": "module",
+	"private": true,
+	"engines": {
+		"node": ">=22.19.0"
+	},
+	"pi": {
+		"extensions": [
+			"./src/extension.ts"
+		],
+		"skills": [
+			"./skills"
+		]
+	},
+	"imports": {
+		"#src/*": "./src/*"
+	},
+	"files": [
+		"src",
+		"skills",
+		"README.md"
+	],
+	"scripts": {
+		"typecheck": "tsc -p ."
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-ai": "*",
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-ai": "1.4.0",
+		"@earendil-works/pi-coding-agent": "1.4.0",
+		"@types/node": "22",
+		"typescript": "7.0.2"
+	},
+	"allowScripts": {
+		"@google/genai": true,
+		"protobufjs": true
+	}
+}
